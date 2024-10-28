@@ -1,8 +1,8 @@
-# Your Name Here
+# Rylan Galloway
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
+# 10/28/2024
+# Lab 07
+# Lab Section: 14
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -16,11 +16,19 @@
     # To do so you can use the methods `.isdigit()` or `.isnumeric()`
     # If a user did not enter a number output a statement saying so
 # You will continue to prompt the user until a proper integer value is entered
-
 factorial = 1
 
+while(True):
+    factorial = input("Give a positive number")
+    if factorial.isnumeric() == True and int(factorial) > 0 :
+        for number in range(1, int(factorial)):
+            factorial = number*int(factorial)
+        else:
+            break
+    else:
+        print("This is not a number")
+        break
 print(f"The result of the factorial based on the given bound is {factorial}")
-
 print("*"*75)
 # Create a while loop that prompts a user for input of an integer values
 # Sum all inputs. When the user enters 'exit' (regardless of casing) end the loop
@@ -38,6 +46,13 @@ print("*"*75)
 # The sum should start at 0 
 
 num_sum = 0 
+
+while(True):
+    num_sum= input("Enter Integers")
+    if isinstance(num_sum, int):
+        num_sum = num_sum + num_sum
+    elif input(num_sum)== "exit":
+        break
 
 print(f"Your final sum is {num_sum}")
 
@@ -58,5 +73,13 @@ print("*"*75)
     # So, it should function the same for `5 + 6` as `5+6`
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
-
+while(True):
+    operands = ["+" , "-"]
+    for operand in operands:
+        if (operand in calculator):
+            numbers = calculator.split("+")
+            numbers[0]
+            numbers[1] 
+            continue
+    print("error")
         
