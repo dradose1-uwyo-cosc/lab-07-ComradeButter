@@ -45,16 +45,17 @@ print("*"*75)
 # All this together means you will have an intensive while loop that includes multiple if statements, likely with some nesting 
 # The sum should start at 0 
 
-num_sum = 0 
+total_sum = 0 
 
 while(True):
     num_sum= input("Enter Integers")
-    if isinstance(num_sum, int):
-        num_sum = num_sum + num_sum
-    elif input(num_sum)== "exit":
-        break
+    num_sum.split()
+    if num_sum.strip('-').isdigit():
+        for num in num_sum:
+            total_sum += int(num)
+    break
 
-print(f"Your final sum is {num_sum}")
+print(f"Your final sum is {total_sum}")
 
 print("*"*75)
 # Now you will be creating a two operand calculator
@@ -73,13 +74,19 @@ print("*"*75)
     # So, it should function the same for `5 + 6` as `5+6`
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
+
 while(True):
-    operands = ["+" , "-"]
-    for operand in operands:
-        if (operand in calculator):
-            numbers = calculator.split("+")
-            numbers[0]
-            numbers[1] 
-            continue
-    print("error")
-        
+    user_input= input("Input a operation involving two integers")
+    user_input.split()
+    if user_input[0].isdigit() and user_input[2].isdigit()== True:
+        if user_input[1]== "-":
+            total_calc = int(user_input[0]) - int(user_input[2])
+        elif user_input[1]== "+":
+            total_calc = int(user_input[0]) + int(user_input[2])
+        elif user_input[1]== "/":
+            total_calc = int(user_input[0]) / int(user_input[2])
+        elif user_input[1]== "%":
+            total_calc = f"{int(user_input[0]) / int(user_input[2]) * 100}%"
+                
+    print(total_calc)
+    break
